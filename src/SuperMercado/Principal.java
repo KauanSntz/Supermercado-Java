@@ -12,6 +12,6 @@ public class Principal {
 		produto1.exibirInfo();
 		produto1.reporEstoque(5);
 		
-		System.out.println("Unidades: "+produto1.getQtEstoque());
+		produto1.exibirInfo();
 	}
 }
