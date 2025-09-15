@@ -22,25 +22,25 @@ public class Mercadao {
 	
 	public void addCliente(Cliente cliente) {
 		listaClientes.add(cliente);
-		System.out.println("\nCliente | "+ cliente.getNome()+
-				" | adicionado ao SuperMercado!");
+		System.out.println("\nCliente > "+ cliente.getNome()+
+				" < adicionado ao SuperMercado!");
 	}
 	
 	public void removerCliente(Cliente cliente) {
 		listaClientes.remove(cliente);
-		System.out.println("\nCliente | "+ cliente.getNome()+
-				" | removido do SuperMercado!");
+		System.out.println("\nCliente > "+ cliente.getNome()+
+				" < removido do SuperMercado!");
 	}
 	
 	public void addProduto(Produto produto) {
 		listaProdutos.add(produto);
-		System.out.println("\nProduto | "+ produto.getNome()+
-				" | adicionado ao SuperMercado!");
+		System.out.println("\nProduto > "+ produto.getNome()+
+				" < adicionado ao SuperMercado!");
 	}
 	
 	public void removerProduto(Produto produto) {
 		listaProdutos.remove(produto);
-		System.out.println("Produto | "+ produto.getNome()+
+		System.out.println("| Produto "+ produto.getNome()+
 				" | removido do SuperMercado!");
 	}
 	
@@ -48,7 +48,7 @@ public class Mercadao {
 		String registro = "Cliente: |"+c.getNome()
 		+" | Valor da compra: "+ valorTotal;
 		listaVendas.add(registro);
-		System.out.println("\nVenda registrada com sucesso!");
+		System.out.println("\n- Venda registrada com sucesso!");
 	}
 	
 	public void listarVendas() {
@@ -57,7 +57,7 @@ public class Mercadao {
 	}
 	
 	public void listarProdutos() {
-		System.out.println("\nProdutos da lista: ");
+		System.out.println("\n- Produtos da lista: ");
 		for(Produto p : listaProdutos)
 			p.exibirInfo();
 	}

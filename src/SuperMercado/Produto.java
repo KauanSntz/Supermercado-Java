@@ -24,9 +24,9 @@ public class Produto {
 	}
 	
 	public void exibirInfo(){
-		System.out.println("\nProduto: "+getNome());
-		System.out.println("Preco: "+getPreco());
-		System.out.println("Unidades: "+getQtEstoque());
+		System.out.print("\n| Produto: "+getNome());
+		System.out.print(" | Preco: "+getPreco());
+		System.out.print(" | Unidades: "+getQtEstoque()+"\n");
 	}
 	
 	public void reporEstoque(int quantidade) {
@@ -44,8 +44,8 @@ public class Produto {
 	public boolean vender(int quantidade) {
 		if(getQtEstoque() >= quantidade && quantidade > 0) {
 			this.qtEstoque -= quantidade;
-			System.out.println("\nVenda concluída!");
-			System.out.println("Foram vendidas "+quantidade+
+			System.out.println("\n- Venda concluída!");
+			System.out.println("- Foram vendidas "+quantidade+
 					" unidades de "+getNome());
 			return true;
 		}else {

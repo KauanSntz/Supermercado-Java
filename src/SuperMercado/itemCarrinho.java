@@ -21,6 +21,10 @@ public class itemCarrinho {
 		return produto.getPreco() * quantidade;
 	}
 	
+	//public void decrementarQuantidade(int qtd) {
+	//	this.quantidade -= qtd;
+	//}
+	
 	public void incrementarQuantidade(int qtd) {
 		this.quantidade += qtd;
 	}

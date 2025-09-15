@@ -2,16 +2,31 @@ package SuperMercado;
 
 public class Principal {
 	public static void main(String[] args) {
-		Produto produto1;
-		produto1 = new Produto("Palha", 4.00, 100);
+		Produto palha;
+		Produto trufa;
+		Cliente mari;
+		Mercadao atack;
+		atack = new Mercadao("Atack");
 		
-		produto1.exibirInfo();
+		palha = new Produto("Palha", 4.00, 100);
+		atack.addProduto(palha);
 		
-		produto1.vender(10);
+		trufa = new Produto("Trufa", 3.50, 20);
+		atack.addProduto(trufa);
 		
-		produto1.exibirInfo();
-		produto1.reporEstoque(5);
+		mari = new Cliente("Mariana Banana");
+		atack.addCliente(mari);
 		
-		produto1.exibirInfo();
+		mari.addAoCarrinho(palha, 10);
+		mari.listarCarrinho();
+		mari.addAoCarrinho(trufa, 10);
+		mari.listarCarrinho();
+
+		palha.exibirInfo();
+		
+		mari.finalizarCompra();
+		
+		atack.listarProdutos();
+		atack.listarVendas();
 	}
 }
